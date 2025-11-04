@@ -1,0 +1,78 @@
+.notif-container {
+  max-width: 630px;
+  margin: 35px auto;
+  background: #f6fbff;
+  border-radius: 14px;
+  padding: 30px 27px 28px 27px;
+  box-shadow: 0 2px 13px rgba(122,157,186,0.11);
+  border: 1.5px solid #e1e9f2;
+}
+
+.notif-container h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #2980b9;
+}
+
+.notif-section {
+  margin-bottom: 28px;
+}
+
+.notif-section h3 {
+  color: #2980b9;
+  margin-bottom: 7px;
+}
+
+.notif-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notif-section li {
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 11px 15px 9px 20px;
+  box-shadow: 0 1px 6px rgba(18,43,67,0.09);
+}
+
+.notif-btns {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.notif-btns .accept {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.notif-btns .reject {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.notif-status {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.notif-status.accepted { color: #27ae60; }
+.notif-status.pending { color: #e67e22; }
+.notif-status.rejected { color: #c0392b; }
+
+.notif-msg {
+  margin-bottom: 13px;
+  color: #1abc9c;
+  font-weight: 500;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 const Event = require('../models/Event');
 const SwapRequest = require('../models/SwapRequest');
 
-// Get swappable slots (other users)
+// Get swappable slots 
 exports.getSwappableSlots = async (req, res) => {
   const slots = await Event.find({ status: 'SWAPPABLE', user: { $ne: req.user } });
   res.json(slots);

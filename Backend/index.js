@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Error", err));
 
-// Import your routes here (add these files in next steps)
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api', require('./routes/swap'));
