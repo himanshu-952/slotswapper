@@ -12,7 +12,6 @@ export default function Dashboard() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // Auth guard
   useEffect(() => {
     if (!localStorage.getItem('token')) navigate('/');
     fetchEvents();
@@ -110,12 +109,14 @@ export default function Dashboard() {
         <ul className="events-list">
           {events.map(ev => (
             <li key={ev._id} className={`event-item ${ev.status.toLowerCase()}`}>
-              <div>
-                <strong>{ev.title}</strong><br/>
-                {new Date(ev.startTime).toLocaleString()} - {new Date(ev.endTime).toLocaleString()}
+              <div className="event-main">
+                <strong>{ev.title}</strong>
+                <span className="event-dates">
+                  {new Date(ev.startTime).toLocaleString()} - {new Date(ev.endTime).toLocaleString()}
+                </span>
               </div>
               <div>
-                <span>Status: {ev.status}</span>
+                <span className="status-label">Status: {ev.status}</span>
                 {ev.status === "BUSY" && (
                   <button onClick={() => handleUpdateStatus(ev._id, "SWAPPABLE")}>Make Swappable</button>
                 )}
